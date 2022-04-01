@@ -1,0 +1,13 @@
+import re
+
+text = "0AFGHi2398-k9nm<STATIC>\cvs23lCVpid293000000000000000000000(PERFORCE)nmzxca3212\
+<CODE>3321lasdSASD<klocwork>mcnsbSACbc[HELIX]1111111111111000vaAvm333311vmpascv\
+<ANALYSIS>000000000000000vsp333311<qac>11111111vnvnASOVAbbbbbbbbbbbas<2231aACV>";
+
+m = re.findall('<([A-Z]+)>', text);
+if len(m) > 0:
+    print ("List of keyword(s) found;");
+    for i in range(0, len(m)):
+        print(m[i])
+else:
+    print ("No keywords found.");
